@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ครัวไทยใจดี | Thai Food Restaurant</title>
+  <style>
+    :root { --pink:#f47f91; --pink-light:#fff0f3; --pink-mid:#ffd5df; --brown:#754b3b; --cream:#fffafb; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Tahoma, "Noto Sans Thai", sans-serif; color:var(--brown); background:var(--cream); }
+    a { color:inherit; text-decoration:none; }
+    .header { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 5%; background:var(--pink-light); border-bottom:1px solid var(--pink-mid); flex-wrap:wrap; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:clamp(20px,2.3vw,30px); font-weight:bold; }
+    .brand .icon { font-size:38px; }
+    .brand small { display:block; font-size:12px; font-weight:normal; color:var(--pink); }
+    nav { display:flex; gap:clamp(12px,2.5vw,32px); flex-wrap:wrap; }
+    nav a { font-weight:bold; }
+    nav a:hover { color:var(--pink); }
+    .hero { min-height:380px; display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:24px; padding:45px 6%; background:linear-gradient(120deg,#ffe8ed,#ffd0db); }
+    .hero h1 { margin:0 0 8px; font-size:clamp(34px,5vw,62px); line-height:1.2; }
+    .hero h2 { margin:0 0 18px; color:var(--pink); font-size:clamp(24px,3vw,38px); }
+    .hero p { font-size:18px; }
+    .button { display:inline-block; padding:12px 30px; margin-top:10px; background:var(--pink); color:white; border-radius:30px; font-weight:bold; }
+    .button:hover { filter:brightness(.95); }
+    .hero img { width:100%; max-height:320px; object-fit:cover; border-radius:32px; box-shadow:0 12px 28px #a55b5b25; }
+    section { padding:42px 5%; }
+    .section-title { text-align:center; margin:0 0 26px; font-size:clamp(26px,3vw,38px); color:var(--pink); }
+    .menu-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .dish { background:white; border:1px solid #ffe0e6; border-radius:18px; padding:12px; text-align:center; box-shadow:0 5px 18px #8d53610d; }
+    .dish img { width:100%; height:135px; object-fit:cover; border-radius:12px; }
+    .dish h3 { margin:12px 0 6px; font-size:17px; }
+    .price { display:inline-block; padding:7px 18px; border-radius:20px; background:var(--pink); color:white; font-weight:bold; }
+    .about { display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:28px; background:#fff0f3; border-radius:24px; padding:30px; }
+    .about h2 { color:var(--pink); font-size:32px; margin-top:0; }
+    .about p { line-height:1.9; }
+    .chef { text-align:center; font-size:110px; }
+    .contact { background:linear-gradient(120deg,#ffe7ed,#ffd1dc); }
+    .contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .contact-card { background:#ffffffa8; border-radius:16px; padding:20px; }
+    footer { text-align:center; padding:18px; background:#f7a4b2; color:#fff; }
+    @media (max-width:800px) { .hero,.about { grid-template-columns:1fr; } .menu-grid { grid-template-columns:repeat(2,1fr); } .contact-grid { grid-template-columns:1fr; } nav { width:100%; } }
+    @media (max-width:480px) { .menu-grid { grid-template-columns:1fr; } .hero { padding:30px 5%; } }
+  </style>
+</head>
+<body>
+  <header class="header" id="home">
+    <a class="brand" href="#home"><span class="icon">🍲</span><span>ครัวไทยใจดี<small>Thai Food Restaurant</small></span></a>
+    <nav aria-label="เมนูหลัก">
+      <a href="#home">หน้าแรก</a><a href="#menu">เมนูอาหาร</a><a href="#about">เกี่ยวกับเรา</a><a href="#contact">ติดต่อเรา</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="แนะนำร้าน">
+      <div>
+        <h1>อาหารไทย</h1>
+        <h2>รสชาติต้นตำรับ</h2>
+        <p>วัตถุดิบสดใหม่ รสชาติอร่อย บรรยากาศอบอุ่น 🌸</p>
+        <a class="button" href="#menu">เลือกเมนูอาหาร ›</a>
+      </div>
+      <img src="images/hero.png" alt="แบนเนอร์แนะนำร้านอาหารไทย">
+    </section>
+
+    <section id="menu">
+      <h2 class="section-title">เมนูแนะนำ 🍜</h2>
+      <div class="menu-grid">
+        <article class="dish"><img src="images/menu.png" alt="ภาพเมนูอาหารไทย"><h3>ข้าวกะเพราหมูสับ</h3><span class="price">60 บาท</span></article>
+        <article class="dish"><img src="images/menu.png" alt="ภาพเมนูอาหารไทย"><h3>ต้มยำกุ้ง</h3><span class="price">120 บาท</span></article>
+        <article class="dish"><img src="images/menu.png" alt="ภาพเมนูอาหารไทย"><h3>แกงเขียวหวานไก่</h3><span class="price">100 บาท</span></article>
+        <article class="dish"><img src="images/menu.png" alt="ภาพเมนูอาหารไทย"><h3>ผัดไทยกุ้งสด</h3><span class="price">90 บาท</span></article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div><h2>เกี่ยวกับเรา 💗</h2><p>ครัวไทยใจดีเกิดจากความรักในอาหารไทย เราคัดสรรวัตถุดิบคุณภาพ ปรุงด้วยความใส่ใจ เพื่อให้ทุกมื้อของคุณเต็มไปด้วยความอร่อย ความอบอุ่น และรอยยิ้ม</p><a class="button" href="#contact">ติดต่อร้าน ›</a></div>
+        <div class="chef" aria-label="เชฟ">👩🏻‍🍳</div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">ติดต่อเรา 🌷</h2>
+      <div class="contact-grid">
+        <div class="contact-card"><h3>📍 ที่อยู่ร้าน</h3><p>123/45 ถนนสุขภาพดี<br>อำเภอเมือง จังหวัดของคุณ</p></div>
+        <div class="contact-card"><h3>☎️ โทรศัพท์</h3><p>081-234-5678</p><p>เปิดบริการทุกวัน 10.00–22.00 น.</p></div>
+        <div class="contact-card"><h3>💌 ติดตามเรา</h3><p>Facebook: ครัวไทยใจดี</p><p>Instagram: @kruathai_jaidee</p></div>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 ครัวไทยใจดี | อร่อยด้วยใจ ทำสดใหม่ทุกวัน 💕</footer>
+</body>
+</html>
